@@ -1,0 +1,218 @@
+@media screen and (max-width: 500px) {
+  html {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  .logo {
+    font-family: 'Shrikhand', sans-serif;
+    text-align: center;
+  }
+  /* localisation ville */
+  .localisation__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin: 0;
+  }
+  .localisation .icone {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+  }
+  .localisation .input {
+    background-color: #eaeaea;
+    height: 2rem;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-weight: bolder;
+  }
+  .localisation .input::-webkit-input-placeholder {
+    color: black;
+  }
+  .localisation .input:-ms-input-placeholder {
+    color: black;
+  }
+  .localisation .input::-ms-input-placeholder {
+    color: black;
+  }
+  .localisation .input::placeholder {
+    color: black;
+  }
+  .info {
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 10%;
+  }
+  .info__btn {
+    background: #ff79da;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
+    background: linear-gradient(180deg, #ff79da 16%, #9356dc 100%);
+    color: white;
+    font-weight: bold;
+    padding: 5% 0;
+    border: none;
+    border-radius: 25px;
+    margin: 5% 15%;
+  }
+  .fonctionnement {
+    margin: 15% 5%;
+    position: relative;
+  }
+  .fonctionnement .etapes {
+    padding: 0;
+    margin: 2%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fonctionnement__titre {
+    margin-bottom: 7%;
+  }
+  .fonctionnement_etape {
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: burlywood;
+            box-shadow: burlywood;
+    padding: 1%;
+    border-radius: 20px;
+    width: 100%;
+    margin: 5% 0;
+    font-weight: bolder;
+    -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
+    box-shadow: 0px 10px 18px 0px #f3eded;
+    background-color: #f6f6f6;
+    position: relative;
+  }
+  .fonctionnement_etape_numero {
+    position: absolute;
+    top: 10%;
+    left: -2%;
+    color: white;
+    background-color: #9356DC;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    padding-top: -2%;
+    text-align: center;
+    padding: 0px;
+  }
+  .fonctionnement_etape:hover {
+    background-color: #f7edff;
+  }
+  .fonctionnement__icone::before {
+    margin-right: 20px;
+    color: #9356DC;
+  }
+  .Restaurant {
+    background-color: #f6f6f6;
+    padding: 10% 0;
+  }
+  .Restaurant__titre {
+    margin-left: 8%;
+  }
+  .Restaurant__figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .Restaurant__figure__img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 170px;
+  }
+  .Restaurant__nouveau {
+    background-color: #99E2D0;
+    color: #008766;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 1%;
+    font-weight: bold;
+    font-size: small;
+  }
+  .Restaurant__figcaption {
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
+    box-shadow: 0px 10px 18px 0px #c3c2c2;
+    background-color: white;
+    padding-left: 10px;
+  }
+  .Restaurant__figcaption__lieu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 5rem;
+    padding-top: 15px;
+  }
+  .Restaurant__figcaption__lieu p {
+    margin: 5px;
+  }
+  .Restaurant__icone {
+    padding-right: 10%;
+    font-size: x-large;
+  }
+  .Restaurant__icone:hover {
+    color: #9356DC;
+    cursor: pointer;
+  }
+  .footer {
+    padding: 2%;
+    background-color: #353535;
+    color: white;
+  }
+  .footer .logo {
+    text-align: left;
+    padding-left: 10%;
+  }
+  .footer__list {
+    list-style: none;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
