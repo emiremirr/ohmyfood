@@ -1,0 +1,207 @@
+@media screen and (max-width: 500px) {
+    html{
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    body{
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+    }
+
+    .logo {
+        font-family: 'Shrikhand', sans-serif;
+        text-align: center;
+    }
+
+
+    /* localisation ville */
+    .localisation {
+            &__form{
+                display: flex;
+                position: relative;
+                margin: 0;
+            }
+            .icone{
+                position: absolute;
+                top: 25%;
+                left: 30%;
+            }
+            .input{
+                background-color: rgb(234, 234, 234);
+                height: 2rem;
+                width: 100%;
+                border: none;
+                text-align: center;
+                font-weight: bolder;
+            }
+            .input::placeholder{
+                color: black;
+            }
+        }
+     
+    .info{
+        background-color: rgb(246, 246, 246);
+        display: flex;
+        flex-direction: column;
+        text-align: center;        
+        padding: 10%;
+
+        &__btn {
+            background: rgb(255,121,218);
+            background: linear-gradient(180deg, rgba(255,121,218,1) 16%, rgba(147,86,220,1) 100%);
+            color: white;
+            font-weight: bold;
+            padding: 5% 0;
+            border: none;
+            border-radius: 25px;
+            margin: 5% 15% ;
+        }
+
+    }          
+ 
+    .fonctionnement{
+        margin: 15% 5%;
+        position: relative;
+
+        .etapes{
+            padding: 0;
+            margin: 2%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__titre{
+            margin-bottom:7%;
+        }
+
+        &_etape {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: burlywood;
+            padding: 1%;
+            border-radius: 20px;
+            width: 100%;
+            margin: 5% 0;
+            font-weight: bolder;
+            -webkit-box-shadow: 0px 10px 18px 0px rgba(209,209,209,1);
+            -moz-box-shadow: 0px 10px 18px 0px rgb(225, 223, 223);
+            box-shadow: 0px 10px 18px 0px #f3eded;
+            background-color: rgb(246, 246, 246);
+            position: relative;
+        
+            &_numero{
+                position: absolute;
+                top: 10%;
+                left: -2%;
+                color: white;
+                background-color: #9356DC;
+                border-radius: 100%;
+                height: 20px;
+                width: 20px;
+                padding-top: -2%;
+                text-align: center;
+                padding: 0px;
+            }
+            
+            &:hover{
+                background-color: rgb(247, 237, 255);;
+            }
+
+        }
+        &__icone::before{
+            margin-right:  20px;
+            color: #9356DC;
+        }
+    }
+
+    .Restaurant{
+        background-color: rgb(246, 246, 246);
+        padding: 10% 0;
+
+        &__titre{
+            margin-left: 8%;
+        }
+
+        &__figure{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+
+           &__img{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            object-fit: cover;
+            height: 170px;
+           }
+        }
+
+        &__nouveau{
+            background-color: #99E2D0;
+            color: rgb(0, 135, 102);
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            padding: 1%;
+            font-weight: bold;
+            font-size: small;
+        }
+
+        &__figcaption{
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-box-shadow: 0px 10px 18px 0px rgba(209,209,209,1);
+            -moz-box-shadow: 0px 10px 18px 0px rgb(225, 223, 223);
+            box-shadow: 0px 10px 18px 0px #c3c2c2;
+            background-color: white;
+            padding-left: 10px;
+
+            &__lieu{
+                display: flex;
+                flex-direction: column;
+                height: 5rem;
+                padding-top: 15px;
+                
+                & p {
+                    margin: 5px;
+                }
+            }
+        }
+        
+        &__icone{
+            padding-right: 10%;
+            font-size: x-large;
+
+            &:hover{
+                color: #9356DC;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer{
+        padding: 2%;
+        background-color: rgb(53, 53, 53);
+        color: white;
+        
+        .logo {
+            text-align: left;
+            padding-left: 10%;  
+        }
+
+        &__list{
+            list-style: none;
+        }
+    }
+
+}
