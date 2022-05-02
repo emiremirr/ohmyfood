@@ -310,6 +310,19 @@
         }
 
     }
+    .commander{
+        .btn{
+        background: linear-gradient(180deg, #ff79da 16%, #9356dc 100%);
+        color: white;
+        font-weight: bold;
+        padding: 20px 0;
+        border: none;
+        border-radius: 30px;
+        font-size: medium;
+        margin: 10% 25% 15% 25%;
+        width: 53%;
+        }
+    }
 
 }
 

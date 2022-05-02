@@ -337,5 +337,17 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .commander .btn {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
+    background: linear-gradient(180deg, #ff79da 16%, #9356dc 100%);
+    color: white;
+    font-weight: bold;
+    padding: 20px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: medium;
+    margin: 10% 25% 15% 25%;
+    width: 53%;
+  }
 }
 /*# sourceMappingURL=mobile.css.map */
