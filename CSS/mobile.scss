@@ -25,8 +25,8 @@
             }
             .icone{
                 position: absolute;
-                top: 37%;
-                left: 25%;
+                top: 38%;
+                left: 20%;
             }
             .input{
                 background-color: rgb(234, 234, 234);
@@ -276,6 +276,41 @@
         &__menu{
             list-style: none;
             padding-left: 0;
+
+            &__validation{ 
+
+                & i {
+                    visibility: hidden;
+                    background-color: #99E2D0;
+                    color: white;
+                    font-size: xx-large;
+                    display: flex;
+                    width: 20%;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    position: absolute;
+                    right: -100px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+
+                &:hover{
+                    & i {
+                    visibility: visible;
+                    right: 0;
+                    top: 0;
+                }
+
+                    & span {
+                        display: none;
+                    }
+                    
+                }
+
+                
+                
+            }
         }
         
         &__description{
@@ -296,27 +331,46 @@
                 &__prix{
                     font-weight: bolder;
                     padding: 5% 5% 0 5%;
-                }
-            
-            &__nom{
-                margin:0%;
+
+                   
+                }   
+                   
+            &__ov{
+                
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            & h4{
+                margin: 0;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 }
                 
                 & p{
-                    margin:0;  
-                    overflow: hidden;
+                    margin: 0;
+                        overflow: hidden;
                     white-space: nowrap;
-                    text-overflow: ellipsis;    
-                } 
-    
+                    text-overflow: ellipsis; 
+                }}
 
-            &__ov{    
-                overflow: hidden;
-                white-space: nowrap;
+            &__check{
+                visibility: hidden;
+                background-color: #99E2D0;
+                display: flex;
+                width: 20%;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                position: absolute;
+                right: -100px;
 
+
+                &::before{    
+                    color: white;
+                    background-color: #99E2D0;
+                    font-size: xx-large;
+                }
             }
         }
 

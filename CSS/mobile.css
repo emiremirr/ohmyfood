@@ -21,8 +21,8 @@
   }
   .localisation .icone {
     position: absolute;
-    top: 37%;
-    left: 25%;
+    top: 38%;
+    left: 20%;
   }
   .localisation .input {
     background-color: #eaeaea;
@@ -294,6 +294,35 @@
     list-style: none;
     padding-left: 0;
   }
+  .palette__menu__validation i {
+    visibility: hidden;
+    background-color: #99E2D0;
+    color: white;
+    font-size: xx-large;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    position: absolute;
+    right: -100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .palette__menu__validation:hover i {
+    visibility: visible;
+    right: 0;
+    top: 0;
+  }
+  .palette__menu__validation:hover span {
+    display: none;
+  }
   .palette__description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -321,21 +350,44 @@
     font-weight: bolder;
     padding: 5% 5% 0 5%;
   }
-  .palette__description__nom {
-    margin: 0%;
+  .palette__description__ov {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description p {
+  .palette__description__ov h4 {
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description__ov {
+  .palette__description__ov p {
+    margin: 0;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .palette__description__check {
+    visibility: hidden;
+    background-color: #99E2D0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    position: absolute;
+    right: -100px;
+  }
+  .palette__description__check::before {
+    color: white;
+    background-color: #99E2D0;
+    font-size: xx-large;
   }
   .commander .btn {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
