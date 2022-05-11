@@ -214,6 +214,7 @@
   .Restaurant__icone {
     padding-right: 10%;
     font-size: x-large;
+    color: linear-gradient(180deg, #ff79da 16%, #9356dc 100%);
   }
   .footer {
     padding: 2%;
@@ -263,6 +264,7 @@
     border-top-right-radius: 50px;
     top: -40px;
     padding: 5% 3% 0 3%;
+    position: relative;
   }
   .palette__nom__titre {
     padding-left: 3%;
@@ -294,7 +296,21 @@
     list-style: none;
     padding-left: 0;
   }
-  .palette__menu__validation i {
+  .palette__menu li:hoverspan {
+    background-color: red;
+    width: 80%;
+  }
+  .palette__menu li:hover .palette__description__check {
+    width: 20%;
+    visibility: visible;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .palette__menu li:hover .palette__description__check::before rotate-90-cw {
+    -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+    animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+  }
+  .palette__menu i {
     visibility: hidden;
     background-color: #99E2D0;
     color: white;
@@ -302,7 +318,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 20%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -314,14 +329,8 @@
     right: -100px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-  }
-  .palette__menu__validation:hover i {
-    visibility: visible;
-    right: 0;
-    top: 0;
-  }
-  .palette__menu__validation:hover span {
-    display: none;
+    right: 0px;
+    bottom: 0px;
   }
   .palette__description {
     display: -webkit-box;
@@ -346,6 +355,36 @@
     box-shadow: 0px 10px 18px 0px #c5c4c4;
     padding: 5%;
   }
+  .palette__description--fadeIn1 {
+    -webkit-animation-name: palette__description--fadeIn1;
+    animation-name: palette__description--fadeIn1;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .palette__description--fadeIn2 {
+    -webkit-animation-name: palette__description--fadeIn2;
+    animation-name: palette__description--fadeIn2;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  .palette__description--fadeIn3 {
+    -webkit-animation-name: palette__description--fadeIn3;
+    animation-name: palette__description--fadeIn3;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
   .palette__description__prix {
     font-weight: bolder;
     padding: 5% 5% 0 5%;
@@ -367,27 +406,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description__check {
-    visibility: hidden;
-    background-color: #99E2D0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 20%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    position: absolute;
-    right: -100px;
-  }
-  .palette__description__check::before {
+  .palette__description__ov::before {
     color: white;
     background-color: #99E2D0;
-    font-size: xx-large;
+    font-size: large;
+  }
+  .commander {
+    margin-bottom: -9%;
   }
   .commander .btn {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
@@ -405,6 +430,74 @@
     cursor: pointer;
     -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
     box-shadow: 0px 10px 18px 0px #c3c2c2;
+  }
+  @-webkit-keyframes rotate-90-cw {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes rotate-90-cw {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  @-webkit-keyframes palette__description--fadeIn1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes palette__description--fadeIn1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes palette__description--fadeIn2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes palette__description--fadeIn2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes palette__description--fadeIn3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes palette__description--fadeIn3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 /*# sourceMappingURL=mobile.css.map */
