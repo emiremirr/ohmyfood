@@ -258,7 +258,7 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .palette {
+  .card {
     background-color: #f6f6f6;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -266,16 +266,16 @@
     padding: 5% 3% 0 3%;
     position: relative;
   }
-  .palette__nom__titre {
+  .card__nom__titre {
     padding-left: 3%;
   }
-  .palette__nom__titre h3 {
+  .card__nom__titre h3 {
     border-bottom: 4px solid #99E2D0;
     padding-bottom: 2%;
     width: 15%;
     font-weight: normal;
   }
-  .palette__titre {
+  .card__titre {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -292,47 +292,11 @@
             justify-content: space-between;
     font-size: larger;
   }
-  .palette__menu {
+  .card__menu {
     list-style: none;
     padding-left: 0;
   }
-  .palette__menu li:hoverspan {
-    background-color: red;
-    width: 80%;
-  }
-  .palette__menu li:hover .palette__description__check {
-    width: 20%;
-    visibility: visible;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .palette__menu li:hover .palette__description__check::before rotate-90-cw {
-    -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
-    animation: rotate-90-cw 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
-  }
-  .palette__menu i {
-    visibility: hidden;
-    background-color: #99E2D0;
-    color: white;
-    font-size: xx-large;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    position: absolute;
-    right: -100px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    right: 0px;
-    bottom: 0px;
-  }
-  .palette__description {
+  .card__menu__description {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -355,9 +319,67 @@
     box-shadow: 0px 10px 18px 0px #c5c4c4;
     padding: 5%;
   }
-  .palette__description--fadeIn1 {
-    -webkit-animation-name: palette__description--fadeIn1;
-    animation-name: palette__description--fadeIn1;
+  .card__menu__description__details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .card__menu__description__details i {
+    display: none;
+  }
+  .card__menu__description__details:hover {
+    width: 80%;
+    cursor: pointer;
+  }
+  .card__menu__description__details:hover i {
+    z-index: 1;
+    display: block;
+    background-color: #99E2D0;
+    color: white;
+    font-size: x-large;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    position: absolute;
+    right: -1px;
+    bottom: 0%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 20%;
+    visibility: visible;
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .card__menu__description__details:hover i::before {
+    -webkit-animation: rotation 1s linear;
+            animation: rotation 1s linear;
+  }
+  .card__menu__description--fadeIn1 {
+    -webkit-animation-name: card__description--fadeIn1;
+    animation-name: card__description--fadeIn1;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -365,9 +387,9 @@
     -webkit-animation-delay: 0.3s;
             animation-delay: 0.3s;
   }
-  .palette__description--fadeIn2 {
-    -webkit-animation-name: palette__description--fadeIn2;
-    animation-name: palette__description--fadeIn2;
+  .card__menu__description--fadeIn2 {
+    -webkit-animation-name: card__description--fadeIn2;
+    animation-name: card__description--fadeIn2;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -375,9 +397,9 @@
     -webkit-animation-delay: 0.6s;
             animation-delay: 0.6s;
   }
-  .palette__description--fadeIn3 {
-    -webkit-animation-name: palette__description--fadeIn3;
-    animation-name: palette__description--fadeIn3;
+  .card__menu__description--fadeIn3 {
+    -webkit-animation-name: card__description--fadeIn3;
+    animation-name: card__description--fadeIn3;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -385,36 +407,31 @@
     -webkit-animation-delay: 0.9s;
             animation-delay: 0.9s;
   }
-  .palette__description__prix {
+  .card__menu__description__prix {
     font-weight: bolder;
     padding: 5% 5% 0 5%;
   }
-  .palette__description__ov {
+  .card__menu__description__ov {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description__ov h4 {
+  .card__menu__description__ov h4 {
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description__ov p {
+  .card__menu__description__ov p {
     margin: 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .palette__description__ov::before {
-    color: white;
-    background-color: #99E2D0;
-    font-size: large;
-  }
-  .commander {
+  .card .commander {
     margin-bottom: -9%;
   }
-  .commander .btn {
+  .card .commander .btn {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
     background: linear-gradient(180deg, #ff79da 16%, #9356dc 100%);
     color: white;
@@ -426,7 +443,7 @@
     margin: 10% 25% 15% 25%;
     width: 53%;
   }
-  .commander .btn:hover {
+  .card .commander .btn:hover {
     cursor: pointer;
     -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
     box-shadow: 0px 10px 18px 0px #c3c2c2;
@@ -451,7 +468,7 @@
       transform: rotate(90deg);
     }
   }
-  @-webkit-keyframes palette__description--fadeIn1 {
+  @-webkit-keyframes card__description--fadeIn1 {
     0% {
       opacity: 0;
     }
@@ -459,7 +476,7 @@
       opacity: 1;
     }
   }
-  @keyframes palette__description--fadeIn1 {
+  @keyframes card__description--fadeIn1 {
     0% {
       opacity: 0;
     }
@@ -467,7 +484,7 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes palette__description--fadeIn2 {
+  @-webkit-keyframes card__description--fadeIn2 {
     0% {
       opacity: 0;
     }
@@ -475,7 +492,7 @@
       opacity: 1;
     }
   }
-  @keyframes palette__description--fadeIn2 {
+  @keyframes card__description--fadeIn2 {
     0% {
       opacity: 0;
     }
@@ -483,7 +500,7 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes palette__description--fadeIn3 {
+  @-webkit-keyframes card__description--fadeIn3 {
     0% {
       opacity: 0;
     }
@@ -491,12 +508,54 @@
       opacity: 1;
     }
   }
-  @keyframes palette__description--fadeIn3 {
+  @keyframes card__description--fadeIn3 {
     0% {
       opacity: 0;
     }
     100% {
       opacity: 1;
+    }
+  }
+  @-webkit-keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+  }
+  @keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
     }
   }
 }

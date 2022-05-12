@@ -248,7 +248,7 @@
 
 
     
-    .palette{
+    .card{
         background-color: rgb(246, 246, 246);
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -281,139 +281,159 @@
         &__menu{
             list-style: none;
             padding-left: 0;
-
-               
-            
- 
-      
-
-            & li:hover{
+        
+            &__description{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                margin-bottom: 4%;
+                border-radius: 20px;
+                padding-left: 3%;
+                position: relative;
+                -webkit-box-shadow: 0px 10px 18px 0px rgba(209,209,209,1);
+                -moz-box-shadow: 0px 10px 18px 0px rgb(225, 223, 223);
+                box-shadow: 0px 10px 18px 0px #c5c4c4;
+                padding:  5%;
                 
-                &span{
-                background-color: red;
-                width: 80%;
-                }
+                &__details{
+    
 
-                & .palette__description__check{
-                    width: 20%;
-                    visibility: visible;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin: 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
 
-                    &::before{
-                        & rotate-90-cw {
-                            -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
-                                    animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+                        & i {
+                            
+                        display: none;
+                       
                         }
-                    }
                 }
-                
-            }
+               
+               
 
-            
-                & i {
-                    visibility: hidden;
+                &__details:hover {
+                    width: 80%;
+                    cursor: pointer;
+
+                    & i {
+                        z-index: 1;
+                        display: block;
                     background-color: #99E2D0;
                     color: white;
-                    font-size: xx-large;
+                    font-size: x-large;
                     display: flex;
-                  
                     align-items: center;
                     justify-content: center;
                     height: 100%;
                     position: absolute;
-                    right: -100px;
-                    border-top-right-radius: 20px;
+                    right: -1px;
+                    bottom: 0%;
+                    border-top-right-radius: 20px;                        
                     border-bottom-right-radius: 20px;
-                    right: 0px;
-                    bottom: 0px;
-                }            
-            
-        }
-        
-        &__description{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            background-color: white;
-            margin-bottom: 4%;
-            border-radius: 20px;
-            padding-left: 3%;
-            position: relative;
-            -webkit-box-shadow: 0px 10px 18px 0px rgba(209,209,209,1);
-            -moz-box-shadow: 0px 10px 18px 0px rgb(225, 223, 223);
-            box-shadow: 0px 10px 18px 0px #c5c4c4;
-            padding:  5%;
-            
-
-                &--fadeIn1 {
-                    -webkit-animation-name: palette__description--fadeIn1;
-                    animation-name: palette__description--fadeIn1;
-                    -webkit-animation-duration: 2s;
-                    animation-duration: 2s;
+                    width: 20%;                
+                    visibility: visible;
+                    // animation slide gauche
+                    -webkit-animation-name: slideInRight;
+                    animation-name: slideInRight;
+                    -webkit-animation-duration: 500ms;
+                    animation-duration: 500ms;
                     -webkit-animation-fill-mode: both;
                     animation-fill-mode: both;
-                    animation-delay: 0.3s;
+                    
+                    &::before{
+                        animation: rotation 1s linear;
                     }
-                
-                    &--fadeIn2 {
-                        -webkit-animation-name: palette__description--fadeIn2;
-                        animation-name: palette__description--fadeIn2;
+                        }
+                    
+                }
+
+
+                    &--fadeIn1 {
+                        -webkit-animation-name: card__description--fadeIn1;
+                        animation-name: card__description--fadeIn1;
                         -webkit-animation-duration: 2s;
                         animation-duration: 2s;
                         -webkit-animation-fill-mode: both;
                         animation-fill-mode: both;
-                        animation-delay: 0.6s;
+                        animation-delay: 0.3s;
                         }
-
-                        &--fadeIn3 {
-                            -webkit-animation-name: palette__description--fadeIn3;
-                            animation-name: palette__description--fadeIn3;
+                    
+                        &--fadeIn2 {
+                            -webkit-animation-name: card__description--fadeIn2;
+                            animation-name: card__description--fadeIn2;
                             -webkit-animation-duration: 2s;
                             animation-duration: 2s;
                             -webkit-animation-fill-mode: both;
                             animation-fill-mode: both;
-                            animation-delay: 0.9s;
+                            animation-delay: 0.6s;
                             }
-
-
-                &__prix{
-                    font-weight: bolder;
-                    padding: 5% 5% 0 5%;
-
-                   
-                }   
-                   
-            &__ov{
-                
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            & h4{
-                margin: 0;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                }
-                
-                & p{
-                    margin: 0;
-                        overflow: hidden;
+    
+                            &--fadeIn3 {
+                                -webkit-animation-name: card__description--fadeIn3;
+                                animation-name: card__description--fadeIn3;
+                                -webkit-animation-duration: 2s;
+                                animation-duration: 2s;
+                                -webkit-animation-fill-mode: both;
+                                animation-fill-mode: both;
+                                animation-delay: 0.9s;
+                                }
+    
+    
+                    &__prix{
+                        font-weight: bolder;
+                        padding: 5% 5% 0 5%;
+    
+                       
+                    }   
+                       
+                &__ov{
+                    
+                    overflow: hidden;
                     white-space: nowrap;
-                    text-overflow: ellipsis; 
-                }
-
-            
-
-
-                &::before{    
-                    color: white;
-                    background-color: #99E2D0;
-                    font-size: large;
+                    text-overflow: ellipsis;
+                & h4{
+                    margin: 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    }
+                    
+                    & p{
+                        margin: 0;
+                            overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis; 
+                    }
+    
+                
+    
+    
+                    &::before{    
+                        // color: rgb(67, 3, 3);
+                        // background-color: #99E2D0;
+                        // font-size: large;
+                    }
                 }
             }
+            & li{
+                
+                
+
+               
+
+            
+                
+            
         }
+        
+        
 
     }
     
@@ -462,41 +482,70 @@
         }
       }
     //   opacity fadein1
-        @-webkit-keyframes palette__description--fadeIn1 {
+        @-webkit-keyframes card__description--fadeIn1 {
             
             0% {opacity: 0;}
             100% {opacity: 1; }
         }
-
-        @keyframes palette__description--fadeIn1 {
+        @keyframes card__description--fadeIn1 {
 
             0% {opacity: 0;}
             100% {opacity: 1;}
         }  
         //   opacity fadein2
-        @-webkit-keyframes palette__description--fadeIn2 {
+        @-webkit-keyframes card__description--fadeIn2 {
             
             0% {opacity: 0;}
             100% {opacity: 1; }
         }
-
-
-        @keyframes palette__description--fadeIn2 {
+        @keyframes card__description--fadeIn2 {
             
             0% {opacity: 0;}
             100% {opacity: 1;}
         }  
         //   opacity fadein3
-        @-webkit-keyframes palette__description--fadeIn3 {
+        @-webkit-keyframes card__description--fadeIn3 {
             
             0% {opacity: 0;}
             100% {opacity: 1; }
         }
 
-        @keyframes palette__description--fadeIn3 {
+        @keyframes card__description--fadeIn3 {
 
             0% {opacity: 0;}
             100% {opacity: 1;}
-        }  
+        } 
+        // slide check
+        @-webkit-keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            }
+            @keyframes slideInRight {
+            0% {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            visibility: visible;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            }
+            } 
+            // rotation 360
+            @keyframes rotation {
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(359deg);
+                }
+              }
 }
- 
+}
