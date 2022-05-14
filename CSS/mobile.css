@@ -219,14 +219,27 @@
     padding-right: 10%;
     font-size: x-large;
   }
-  .Restaurant__icone--cliked:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-animation: AnimationName 1s ease infinite;
-    -moz-animation: AnimationName 1s ease infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: AnimationName 1s ease infinite;
+  .Restaurant__icone__nocheck{
+ 
+    position: absolute;
+    right: 10%;
+    background-color: white;
+  }
+  
+  .Restaurant__icone__cliked { 
+   
+     background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+      background: linear-gradient(#9356dc, #ff79da);
+      -webkit-animation: AnimationName 1s ease infinite;
+      -moz-animation: AnimationName 1s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: AnimationName 1s ease infinite;
+  }
+  
+  .Restaurant__icone__nocheck:hover{
+   opacity : 0
+  
   }
   .footer {
     padding: 2%;
@@ -349,7 +362,9 @@
     text-overflow: ellipsis;
   }
   .card__menu__description__details i {
+    width: 0%;
     display: none;
+    right: 0;
   }
   .card__menu__description__details:hover {
     width: 80%;
@@ -371,12 +386,10 @@
             justify-content: center;
     height: 100%;
     position: absolute;
-    right: -1px;
     bottom: 0%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 20%;
-    visibility: visible;
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
     -webkit-animation-duration: 500ms;
@@ -541,7 +554,6 @@
     0% {
       -webkit-transform: translateX(100%);
       transform: translateX(100%);
-      visibility: visible;
     }
     100% {
       -webkit-transform: translateX(0);
@@ -552,7 +564,6 @@
     0% {
       -webkit-transform: translateX(100%);
       transform: translateX(100%);
-      visibility: visible;
     }
     100% {
       -webkit-transform: translateX(0);

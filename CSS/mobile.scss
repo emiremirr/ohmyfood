@@ -208,14 +208,25 @@
             padding-right: 10%;
             font-size: x-large;
            
+            &__nocheck{
+
+                position:absolute;
+                left:7px;
+                background-color : white;
+
+                &:hover{
+                        opacity : 0;
+                }
+            }
             
-            &--cliked:hover{
-                    background: linear-gradient(#9356dc, #ff79da);
-                    -webkit-animation: AnimationName 1s ease infinite;
-                    -moz-animation: AnimationName 1s ease infinite;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                     animation: AnimationName 1s ease infinite;
+            &__cliked{
+                background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+                background: linear-gradient(#9356dc, #ff79da);
+                -webkit-animation: AnimationName 1s ease infinite;
+                -moz-animation: AnimationName 1s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: AnimationName 1s ease infinite;
                     }
         }
     
@@ -326,7 +337,7 @@
                         text-overflow: ellipsis;
 
                         & i {
-                            
+                            width: 0%;
                         display: none;
                        
                         }
@@ -353,8 +364,7 @@
                     bottom: 0%;
                     border-top-right-radius: 20px;                        
                     border-bottom-right-radius: 20px;
-                    width: 20%;                
-                    visibility: visible;
+                    width: 20%;         
                     // animation slide gauche
                     -webkit-animation-name: slideInRight;
                     animation-name: slideInRight;
@@ -527,7 +537,6 @@
             0% {
             -webkit-transform: translateX(100%);
             transform: translateX(100%);
-            visibility: visible;
             }
             100% {
             -webkit-transform: translateX(0);
@@ -538,7 +547,6 @@
             0% {
             -webkit-transform: translateX(100%);
             transform: translateX(100%);
-            visibility: visible;
             }
             100% {
             -webkit-transform: translateX(0);
