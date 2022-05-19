@@ -10,10 +10,11 @@ html {
   justify-items:center;
   justify-content: center;
   background-image: linear-gradient(to bottom, #9356dc,     #ac5bdc, #c160dc, #d667db, #e86edb, #d485ed, #c098f9, #afa8ff, #79bfff, #5bd0fb, #70dbe5, #99e2d0); 
-  position: absolute;
+  position:fixed;
   z-index: 1;
-  height: 100%;
+  height:100%;
   width: 100%;
+  object-fit: cover;
   /*   animation */
   -webkit-animation-name: rotateOut;
   animation-name: rotateOut;
@@ -312,7 +313,7 @@ body {
   right: 9.7%;
   background-color: white;
 }
-
+/* coeur  */
 .Restaurant__icone__nocheck:hover {
   opacity: 0;
 }
@@ -326,6 +327,27 @@ body {
   -webkit-text-fill-color: transparent;
   animation: AnimationName 1s ease infinite;
 }
+
+.card__titre__icone__cliked{
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-animation: AnimationName 1s ease infinite;
+  -moz-animation: AnimationName 1s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: AnimationName 1s ease infinite;
+}
+
+.card__titre__icone__nocheck {
+  position: absolute;
+  right: 5.7%;
+  background-color: #f6f6f6;
+}
+
+.card__titre__icone__nocheck:hover {
+  opacity: 0;
+}
+
 
 .footer {
   padding: 2%;
@@ -450,6 +472,7 @@ body {
   -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
   box-shadow: 0px 10px 18px 0px #c5c4c4;
   padding: 5%;
+  overflow: hidden;
 }
 
 .card__menu__description__details {
@@ -634,6 +657,7 @@ transform-origin: center;
 -webkit-transform: rotate3d(0, 0, 1, 200deg);
 transform: rotate3d(0, 0, 1, 200deg);
 opacity: 0;
+display: none;
 }
 }
 
@@ -722,6 +746,7 @@ opacity: 0;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+  
 }
 
 @keyframes slideInRight {
@@ -733,27 +758,28 @@ opacity: 0;
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+  
 }
 
 @-webkit-keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=mobile.css.map */
