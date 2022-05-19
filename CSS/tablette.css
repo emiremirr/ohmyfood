@@ -28,7 +28,6 @@
         flex-direction:row;
        height : 100px;
        width : 100px;
-        border-top : 
         padding : 2%;
         box-sizing: border-box;
         margin : 2px;
@@ -61,14 +60,12 @@
       @-webkit-keyframes bounce {
         
           0% {transform: rotate(0deg);}
-        100% { transform: rotate(359deg);
-        z-index:-1;}
+        100% { transform: rotate(359deg);}
         } 
         
         @keyframes bounce {
-          0% {transform: rotate(0deg)};
-        100% { transform: rotate(359deg);
-        z-index:-1;}
+          0% {transform: rotate(0deg);}
+        100% { transform: rotate(359deg);}
         } 
       
       @keyframes rotateOut {
