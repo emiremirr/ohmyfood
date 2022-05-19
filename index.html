@@ -8,10 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cc4585fb30.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/3d79397626.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="CSS/mobile.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/tablette.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
     <title>Oh my food</title>
 </head>
 <body>
+    <!-- LOADER -->
+    <div class="loader titre">
+        <div class="loader-">    
+        <div class="loader-rond loader-rond--bounce"> </div>
+        </div>
+        <div class="loader-text"> oh My food</div>
+    </div> 
     <header>
         <!-- LOGO -->
         <div class="header__titre titre">
@@ -19,8 +28,6 @@
         </div>
     </header>
         <!-- debut du corp -->
-  
-  
     <main>
         <section class="localisation">
             <form method="post" action="test" class="localisation__form">
@@ -97,7 +104,6 @@
                 <figure class="Restaurant__figure" >
                     <a href="pages/alafrancaise.html">
                         <img class="Restaurant__figure__img" src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la française">
-                        <span class="Restaurant__nouveau">Nouveau</span>    
                         <figcaption class="Restaurant__figcaption">
                         <div class="Restaurant__figcaption__lieu">
                             <p> <strong>A la française</strong></p>
@@ -114,7 +120,6 @@
                 <figure class="Restaurant__figure" >
                     <a href="pages/ledelice.html">
                     <img class="Restaurant__figure__img" src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Le délice des sens">
-                    <span class="Restaurant__nouveau" >Nouveau</span>    
                         <figcaption class="Restaurant__figcaption">
                             <div class="Restaurant__figcaption__lieu">
                                 <p> <strong>Le délice des sens</strong></p>
@@ -131,7 +136,7 @@
     </main>
         <!-- section footer -->
     <section class="footer" >   
-        <div class="footer__titre logo">
+        <div class="footer__titre titre logo">
             <h5>ohmyfood</h5>
         </div>
         <div>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+
     html{
         margin-left: auto;
         margin-right: auto;
@@ -211,7 +211,7 @@
             &__nocheck{
 
                 position:absolute;
-                left:7px;
+                right:9.7%;
                 background-color : white;
 
                 &:hover{
@@ -562,5 +562,3 @@
                   transform: rotate(359deg);
                 }
               }
-
-}

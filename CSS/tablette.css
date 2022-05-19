@@ -1,0 +1,190 @@
+/* No CSS *//*# sourceMappingURL=tablette.css.map */
+
+@media (min-width : 630px) and (max-width: 1023px) {
+    /* INDEX*/
+    .loader{
+        font-size : 50px;
+        display: flex;
+        flex-direction : column;
+        align-items: center;
+        justify-items:center;
+        background-image: linear-gradient(to bottom, #9356dc,     #ac5bdc, #c160dc, #d667db, #e86edb, #d485ed, #c098f9, #afa8ff, #79bfff, #5bd0fb, #70dbe5, #99e2d0); 
+      /*   animation */
+        -webkit-animation-name: rotateOut;
+        animation-name: rotateOut;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+       animation-delay : 3s;
+      }
+      
+      .loader- {
+        display : flex;
+      }
+      
+      .loader-rond{
+       display : flex;
+        flex-direction:row;
+       height : 100px;
+       width : 100px;
+        border-top : 
+        padding : 2%;
+        box-sizing: border-box;
+        margin : 2px;
+      } 
+      
+      .loader-text{
+       color:white;
+      }
+      
+      .loader-rond--bounce {
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+        -webkit-transform-origin: center bottom;
+        -ms-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        border-top : 7px solid #9356DC;
+        border-bottom : 7px solid #FF79DA;
+        border-right : 7px solid #99E2D0;
+        border-left : 7px solid #99E2D0;
+        border-radius: 100px;
+        animation-iteration-count: infinite;
+        transform-origin: 50% 50%;
+          z-index: 1;
+        }
+      
+      @-webkit-keyframes bounce {
+        
+          0% {transform: rotate(0deg);}
+        100% { transform: rotate(359deg);
+        z-index:-1;}
+        } 
+        
+        @keyframes bounce {
+          0% {transform: rotate(0deg)};
+        100% { transform: rotate(359deg);
+        z-index:-1;}
+        } 
+      
+      @keyframes rotateOut {
+        0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+        }
+        100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 200deg);
+        transform: rotate3d(0, 0, 1, 200deg);
+        opacity: 0;
+        }
+        } 
+
+    .info {
+       padding: 2%;
+    }
+    
+/* section fonctioennment */
+    .fonctionnement{
+        margin: 2%;
+    }
+    .fonctionnement__titre{
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .etapes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+
+    .fonctionnement_etape{
+        margin: 5% 5%;
+        padding: 2%;
+        border-top: 50px solid #9356DC;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .fonctionnement_etape_numero {
+        position: absolute;
+        top: -44%;
+        left: 20%;
+        
+    }
+    .fonctionnement__icone {
+        right: 20%;
+        top: -25px;
+        position: absolute;
+    }
+    .fonctionnement__icone::before {
+        color: white;
+        margin-right: 0px;
+    }
+    /* section Restaurant */
+
+    .Restaurant {
+        display: grid;
+        
+            grid-template-columns: auto auto;
+            gap: 10px;
+            padding: 10px;
+          
+    }
+    .Restaurant__titre{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+    .Restaurant__icone__nocheck {
+        right: 9.7%;
+    }
+
+
+    /* section footer */
+
+    .footer .logo{
+        text-align: center;
+        padding-top: 5%;
+    }
+    .footer__list{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+/* card */
+
+    .card__menu{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__menu__description {
+        padding: 3%;
+        margin: 1%;
+        width: 40%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .card__titre {
+        justify-content: space-evenly;
+        
+    }
+    
+    .entreeplatdessert{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+}
+
