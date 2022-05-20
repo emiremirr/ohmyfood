@@ -82,6 +82,8 @@
     -webkit-transform: rotate3d(0, 0, 1, 200deg);
     transform: rotate3d(0, 0, 1, 200deg);
     opacity: 0;
+    display: none;
+z-index:-1;
     }
     } 
   /* INDEX*/
@@ -111,7 +113,7 @@
   .fonctionnement_etape {
     margin: 5% 5%;
     padding: 2%;
-    border-top: 50px solid #9356DC;
+    border-top: 40px solid #9356DC;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     text-align: center;
@@ -134,15 +136,15 @@
   .Restaurant {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
     gap: 10px;
     padding: 10px;
   }
   .Restaurant__titre {
     -ms-grid-column: 1;
         grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 5;
     text-align: center;
   }
   .Restaurant__icone__nocheck {
