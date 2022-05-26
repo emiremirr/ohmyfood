@@ -26,7 +26,6 @@
     flex-direction:row;
    height : 100px;
    width : 100px;
-    border-top : 
     padding : 2%;
     box-sizing: border-box;
     margin : 2px;
@@ -60,14 +59,11 @@
     
       0% {transform: rotate(0deg);}
     100% { transform: rotate(359deg)};
-    z-index:-1;
     } 
     
     @keyframes bounce {
       0% {transform: rotate(0deg);}
-    100% { transform: rotate(359deg)}
-      ;
-    z-index:-1;
+    100% { transform: rotate(359deg)};
     } 
   
   @keyframes rotateOut {
@@ -87,6 +83,11 @@ z-index:-1;
     }
     } 
   /* INDEX*/
+  .header__pic img {
+    
+    height: 49%;
+  }
+
   .info {
     padding: 2%;
   }
@@ -153,15 +154,18 @@ z-index:-1;
   /* section footer */
   .footer .logo {
     text-align: center;
-    padding-top: 5%;
+      padding: 0;
+      font-size: x-large;
   }
+  
   .footer__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
   /* LA PALETTE DU GOUT */
   .card__menu {
@@ -238,5 +242,8 @@ z-index:-1;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .card__nom__titre h3 {
+    width: 100%;
+}
 }
 /*# sourceMappingURL=desktop.css.map */

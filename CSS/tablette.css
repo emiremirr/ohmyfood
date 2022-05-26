@@ -58,7 +58,10 @@
         }
       
       
-
+        .header__pic img {
+            
+            height: 50%;
+        }
     .info {
        padding: 2%;
     }
@@ -115,6 +118,7 @@
         grid-column-start: 1;
         grid-column-end: 3;
         text-align: center;
+        margin-left: 0;
     }
     .Restaurant__icone__nocheck {
         right: 9.7%;
@@ -125,14 +129,22 @@
 
     .footer .logo{
         text-align: center;
-        padding-top: 5%;
+        padding-top: 0;
+        font-size: x-large;
+        padding-left: 0;
     }
     .footer__list{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        padding-left: 0;
+        flex-direction: row;
     }
 
 /* card */
+.card{
+    padding-top: 3%;
+}
+
 .card__titre__icone__nocheck {
     position: absolute;
     right: 20.2%;

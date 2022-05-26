@@ -357,11 +357,14 @@ body {
 
 .footer .logo {
   text-align: left;
-  padding-left: 10%;
+  text-align: left;
+    padding-left: 7%;
+    font-size: larger;
 }
 
 .footer__list {
   list-style: none;
+  flex-direction: column;
 }
 
 .entreeplatdessert {
@@ -402,7 +405,7 @@ body {
 
 .header__pic img {
   width: 100%;
-  height: 240px;
+  height: 29%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -412,7 +415,7 @@ body {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   top: -40px;
-  padding: 5% 3% 0 3%;
+  padding: 3% 3% 0 3%;
   position: relative;
 }
 
