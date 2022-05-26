@@ -358,8 +358,13 @@ body {
 .footer .logo {
   text-align: left;
   text-align: left;
-    padding-left: 7%;
+    padding-left: 13%;
     font-size: larger;
+}
+.footer__lien{
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
 
 .footer__list {
