@@ -189,6 +189,7 @@ body {
 
 .fonctionnement_etape:hover {
   background-color: #f7edff;
+  box-shadow: 0px 10px 18px 0px #a7a4a4;
 }
 
 .fonctionnement_etape_numero {
@@ -247,6 +248,8 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   height: 170px;
+  object-position: 50% 62%;
+
 }
 
 .Restaurant__nouveau {
@@ -280,7 +283,7 @@ body {
   -webkit-box-shadow: 0px 10px 18px 0px #d1d1d1;
   box-shadow: 0px 10px 18px 0px #c3c2c2;
   background-color: white;
-  padding-left: 10px;
+  padding-left: 5px;
   height: 4rem;
 }
 
@@ -293,10 +296,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 5rem;
-  line-height: 0.4;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+          line-height: 0.7;
+            align-items: flex-start;
+          
 }
 
 .Restaurant__figcaption__lieu p {
@@ -483,6 +488,14 @@ body {
   overflow: hidden;
 }
 
+.card__menu__description:hover {
+  
+  -webkit-box-shadow: 0px 10px 18px 0px #9a9999;
+  box-shadow: 0px 10px 18px 0px #9a9999;
+}
+
+
+
 .card__menu__description__details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,7 +629,11 @@ body {
 
 .commander {
   margin-bottom: -9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .commander .btn {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(16%, #ff79da), to(#9356dc));
@@ -627,7 +644,7 @@ body {
   border: none;
   border-radius: 30px;
   font-size: medium;
-  margin: 10% 25% 15% 25%;
+  margin: 10% 0%;
   width: 53%;
 }
 
@@ -751,10 +768,14 @@ z-index:-1;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
-  100% {
+  50% {
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+    transform: translateX(0);}
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
+  
   
 }
 
@@ -766,7 +787,9 @@ z-index:-1;
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+   
   }
+  
   
 }
 

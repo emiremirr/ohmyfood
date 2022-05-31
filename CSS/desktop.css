@@ -83,9 +83,14 @@ z-index:-1;
     }
     } 
   /* INDEX*/
+  body {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .header__pic img {
-    
-    height: 49%;
+    height: 30%;
+    object-position: 50% 92%;
   }
 
   .info {
@@ -120,43 +125,67 @@ z-index:-1;
     text-align: center;
   }
   .fonctionnement_etape_numero {
-    position: absolute;
-    top: -44%;
+    position: static;
+    top: -38%;
     left: 20%;
-  }
-  .fonctionnement__icone {
-    right: 20%;
-    top: -25px;
+    
+}
+.fonctionnement__icone {
+    left: 50%;
+    top: -22px;
     position: absolute;
-  }
+}
   .fonctionnement__icone::before {
     color: white;
     margin-right: 0px;
   }
   /* section Restaurant */
+  .card_Restau{
+    display: flex;
+  }
   .Restaurant {
-    display: -ms-grid;
-    display: grid;
+    text-align: center;
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto auto;
     gap: 10px;
     padding: 10px;
   }
   .Restaurant__titre {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 5;
-    text-align: center;
+      text-align: center;
+      margin: 0px;
   }
+  
+
+  .card__titre__icone {
+    position: relative;
+    font-size: xx-large;
+  }
+
+  .card__titre__icone__nocheck {
+    position: absolute;
+    right: 1%;
+    background-color: #f6f6f6;
+  }
+
   .Restaurant__icone__nocheck {
+    position: absolute;
     right: 9.7%;
+  }
+  .Restaurant__figure{
+    width: 25%;
   }
   /* section footer */
   .footer .logo {
     text-align: center;
       padding: 0;
       font-size: x-large;
+      
   }
+  .footer {
+    margin-top: 0%;
+      
+  }
+  
   
   .footer__list {
     display: -webkit-box;
@@ -166,6 +195,7 @@ z-index:-1;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     flex-direction: row;
+    padding: 0;
   }
   /* LA PALETTE DU GOUT */
   .card__menu {
