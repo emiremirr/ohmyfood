@@ -351,7 +351,6 @@ body {
 }
 
 .card__titre__icone__nocheck:hover
-/* .Restaurant__icone__nocheck:hover */
 {
   -webkit-animation-name: hearth;
   animation-name: hearth;
@@ -449,7 +448,7 @@ body {
 }
 
 .card__nom__titre {
-  padding-left: 3%;
+  padding-left:   3%;
 }
 
 .card__nom__titre h3 {
@@ -511,9 +510,8 @@ body {
   
   -webkit-box-shadow: 0px 10px 18px 0px #9a9999;
   box-shadow: 0px 10px 18px 0px #9a9999;
+
 }
-
-
 
 .card__menu__description__details {
   display: -webkit-box;
@@ -534,10 +532,8 @@ body {
 
 }
 
-.card__menu__description__details i {
+.card__menu__description i {
   width: 0%;
-  display: none;
-
 }
 
 
@@ -545,10 +541,10 @@ body {
   width: 80%;
   cursor: pointer;
   
+  
 }
 
-.card__menu__description__details__check:hover  {
- 
+.card__menu__description:hover i{
   background-color: #99E2D0;
   color: white;
   font-size: x-large;
@@ -570,16 +566,15 @@ body {
   width: 20%;
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
-  -webkit-animation-duration: 500ms;
-  animation-duration: 500ms;
+  -webkit-animation-duration: 1500ms;
+  animation-duration: 1500ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-direction: alternate;
-}
+} 
 
-.card__menu__description__details:hover i::before {
+.card__menu__description:hover i::before {
   -webkit-animation: rotation 1s linear;
-          animation: rotation 1s linear;
+          animation: rotation 1s linear; 
 }
 
 .card__menu__description--fadeIn1 {
@@ -814,12 +809,14 @@ z-index:-1;
     transform: translateX(100%);
   }
 
-  100% {
+  50% {
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+    transform: translateX(0%);    
   }
-  
-  
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
 }
 
 @keyframes slideInRight {
@@ -828,10 +825,13 @@ z-index:-1;
     transform: translateX(100%);
   }
 
-  100% {
+  50% {
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-   
+    transform: translateX(0%);    
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   
 
