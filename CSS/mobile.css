@@ -534,6 +534,8 @@ body {
 
 .card__menu__description i {
   width: 0%;
+  display: none;
+
 }
 
 
