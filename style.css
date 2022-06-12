@@ -1,0 +1,51 @@
+.green {
+    border-style: solid;
+}
+
+.green .palette__description__check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #99E2D0;
+    width: 150px;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform 300ms 100ms linear;
+    transition: -webkit-transform 300ms 100ms linear;
+    -o-transition: transform 300ms 100ms linear;
+    transition: transform 300ms 100ms linear;
+    transition: transform 300ms 100ms linear, 
+    -webkit-transform 300ms 100ms linear;
+}
+
+.green .palette__description__check .fa-circle-check {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: auto;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 300ms 100ms linear;
+    transition: -webkit-transform 300ms 100ms linear;
+    -o-transition: transform 300ms 100ms linear;
+    transition: transform 300ms 100ms linear;
+    transition: transform 300ms 100ms linear, -webkit-transform 300ms 100ms linear;
+}
+
+.green:hover .palette__description__check {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.green:hover .fa-circle-check {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
